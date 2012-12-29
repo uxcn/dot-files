@@ -1,0 +1,78 @@
+
+source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt/gpg.muttrc
+
+set send_charset="utf-8"
+set assumed_charset="iso-8859-1"
+
+set realname="Jason Schulz"
+set editor="vim -c 'set syntax=mail ft=mail enc=utf-8 spell spelllang=en'"
+
+set spoolfile="+INBOX"
+set imap_check_subscribed
+set hostname=gmail.com
+set mail_check=300
+set timeout=300
+set imap_keepalive=300
+
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+set postponed = "+[Gmail]/Drafts"
+set record = ""
+set header_cache=/tmp/.headers
+set message_cachedir=/tmp/.bodies
+
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+
+hdr_order Date From To Cc
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+alternative_order text/plain text/html *
+auto_view text/html application/pdf application/msword
+
+macro index,pager   y   "<enter-command>unset trash\n <delete-message>"                                             "gmail archive message"
+macro index,pager   d   "<enter-command>set trash=\"=[Gmail]/Trash\"\n <delete-message>" "gmail delete message"
+macro index,pager   gi  "<change-folder>=INBOX<enter>"                                                              "go to inbox"
+macro index,pager   ga  "<change-folder>=[Gmail]/All Mail<enter>"                                                   "go to all mail"
+macro index,pager   gs  "<change-folder>=[Gmail]/Starred<enter>"                                                    "go to starred messages"
+macro index,pager   gd  "<change-folder>=[Gmail]/Drafts<enter>"                                                     "go to drafts"
+macro index,pager   S   "<save-message>=[Gmail]/Spam<enter>"                                                        "mark as spam"
+
+bind index,pager    G   imap-fetch-mail
+
+# labels
+#
+# macro index,pager y "<enter-command>set editor=\"~/.mutt/bin/mutt/editlabel append\"\n<edit><sync-mailbox><next-undeleted><enter-command>set editor=vim\n" "append label"
+# macro index,pager Y "<enter-command>set editor=\"~/.mutt/bin/mutt/editlabel menu\"\n<edit><sync-mailbox><next-undeleted><enter-command>set editor=vim\n" "edit labels"
+
+# macro index \Cy "<limit>~y " "Limit view to label"
+
+account-hook    imaps://imap.gmail.com/             'set imap_user=schulz.j@gmail.com'
+
+folder-hook     'imaps://schulz.j@imap.gmail.com'   'set folder=imaps://schulz.j@imap.gmail.com/'
+
+folder-hook     'imaps://schulz.j@imap.gmail.com'   'set smtp_url=smtps://schulz.j@smtp.gmail.com'
+
+folder-hook     'imaps://schulz.j@imap.gmail.com'   'set from=schulz.j@gmail.com'
+
+folder-hook     'imaps://schulz.j@imap.gmail.com'   'set pgp_sign_as=0xF9AF16BA'
+
+folder-hook     'imaps://schulz.j@imap.gmail.com'   'set pgp_autosign=no'
+
+set folder="imaps://schulz.j@imap.gmail.com"
+mailboxes "=INBOX"
+
+unset imap_passive
+
+set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
+
+set pager_index_lines=32
+set menu_scroll=yes
+

@@ -1,0 +1,4 @@
+text/html; /usr/bin/w3m -I %{charset} -T text/html; copiousoutput
+application/msword; /usr/bin/antiword %s; copiousoutput; description=Word Document; nametemplate=%s.doc
+application/pdf; /usr/bin/pdftotext %s -; copiousoutput; description=PDF Document; nametemplate=%s.pdf
+

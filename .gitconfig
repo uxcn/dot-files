@@ -1,0 +1,9 @@
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[user]
+	name = Jason Schulz
+	email = jason@schulz.name
+[color]
+	ui = true
