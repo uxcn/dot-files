@@ -1,0 +1,51 @@
+<project name="$Project$" default="jar" basedir=".">
+
+    <property name="build.dir" value="build" />
+
+    <property name="src.dir" value="src/java" />
+
+    <target name="clean" >
+
+        <delete>
+            <fileset dir="${build.dir}" includes="*/**" />
+        </delete>
+
+    </target>
+
+    <target name="init">
+
+        <mkdir dir="${build.dir}" />
+        <mkdir dir="${build.dir}/classes" />
+
+    </target>
+
+    <target name="compile" depends="init" description="compile classes">
+
+        <javac destdir="${build.dir}/classes" 
+               source="${java.source}" 
+               target="${java.target}" 
+               debug="${java.debug}"> 
+            <src path="${src.dir}" />
+        </javac>
+
+    </target>
+
+    <target name="jar" depends="compile" description="build jar">
+
+        <jar destfile="${ant.project.name}.jar" filesetmanifest="skip">
+
+            <manifest>
+                <attribute name="Implementation-Title" value="$Project$" />
+                <attribute name="Built-By" value="${user.name}" />
+                <attribute name="Main-Class" value="$Project$" />
+            </manifest>
+
+            <zipfileset dir="${build.dir}/classes" >
+                <include name="**/*.class" />
+            </zipfileset>
+
+        </jar>
+
+    </target>
+
+</project>

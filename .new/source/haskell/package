@@ -1,0 +1,13 @@
+Name: %Object%
+Version:
+Synopsis:
+Description
+Author: $Full$
+Maintainer: $email$
+License-File: 
+Cabal-Version: >= 1.2
+
+library
+    Exposed-Modules: 
+    Other-Modules:
+    Build-Depends: base >= 2.0

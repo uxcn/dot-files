@@ -1,0 +1,39 @@
+//===-- %File% - ? -------------------------------------------+-+*- C++ -*-===//
+//
+//                   $Project$
+//
+// %License%
+//
+//===----------------------------------------------------------------------===//
+///
+///   |file
+///   |brief
+///
+///   |author $Full$
+///
+//===----------------------------------------------------------------------===//
+
+#ifndef %OBJECT%_%EXTENSION%
+#define %OBJECT%_%EXTENSION%
+
+/// |brief
+/// 
+/// |author $Full$
+///
+///
+class %Object% {
+
+public:
+
+    explicit %Object%() {};
+
+    virtual ~%Object%() {};
+
+    %Object%(const %Object%& rhs) = delete;
+    %Object%& operator=(const %Object%& rhs) = delete;
+
+private:
+
+}
+
+#endif /* %OBJECT_%EXTENSION% */

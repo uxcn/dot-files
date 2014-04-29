@@ -1,0 +1,27 @@
+/*   
+ *
+ * %License%
+ *
+ */
+
+package %Package%;
+
+/**
+ * ?
+ *
+ * @since
+ * @version
+ *
+ * @author $full$
+ */
+public class %Object% {
+
+    /**
+     * Default constructor.
+     *
+     */
+    public %Object%() {
+
+    }
+
+}

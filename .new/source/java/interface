@@ -1,0 +1,20 @@
+/*   
+ *
+ * %License%
+ *
+ */
+
+package %Package%;
+
+/**
+ * ?
+ *
+ * @since
+ * @version
+ *
+ * @author $full$
+ */
+public interface %Object% {
+
+
+}

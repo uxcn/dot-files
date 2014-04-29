@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# %File% - ?
+
+# %License%
+
+# author: %user%
+
+USAGE="%File% <arg> [arg...]\\n
+
+cmd                         \\n
+                            \\n
+cmd\\t- ?"
+
+if (( $# <= 0 )); then
+
+    echo -e ${USAGE}
+    exit 1
+
+fi
+
+CMD=$1
+
+shift 1
+
+    
+if [[ ${CMD} == "help" ]]; then
+
+    echo -e ${USAGE}
+    exit 0
+
+fi
+
+if /usr/bin/which new-${CMD} &>>/dev/null; then
+
+    exec new-${CMD} $*
+
+fi
+
+/bin/echo -e "unknown type: ${CMD}\\n"
+/bin/echo -e ${USAGE}
+exit 1

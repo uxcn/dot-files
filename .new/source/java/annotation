@@ -1,0 +1,21 @@
+/*   
+ *
+ * %License%
+ *
+ */
+
+package %Package%;
+
+/**
+ * ?
+ *
+ * @since
+ * @version
+ *
+ * @author $full$
+ */
+ @Retention(RetentionPolicy.Runtime)
+public @interface %Object% {
+
+
+}

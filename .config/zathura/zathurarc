@@ -1,0 +1,7 @@
+set default-bg \#1b1b1b
+set default-fg \#585858
+
+set completion-fg \#585858
+set completion-highlight-bg \#1b1b1b
+set completion-highlight-fg \#2aa198
+set inputbar-fg \#585858

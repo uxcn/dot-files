@@ -1,0 +1,13 @@
+; %File% - ?
+
+; %License%
+
+
+; author: $Full$
+
+    segment .data
+
+    segment .bss
+
+    segment .text
+

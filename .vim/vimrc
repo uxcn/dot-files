@@ -12,16 +12,34 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'rking/ag.vim'
+Plugin 'uxcn/vim-x2x'
 
 filetype plugin indent on
 
 " vim
 set nocompatible
+set encoding=utf-8
 
+set wildmenu
+set autoread
+
+set scrolloff=1
+set sidescrolloff=5
+
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+
+set smarttab
 set smartindent
+set showcmd
+
+
+set shiftround
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
@@ -29,16 +47,21 @@ set expandtab
 set textwidth=80
 set pastetoggle=<F2>
 
+set incsearch
+
 set number
 syntax on
-filetype indent on
 
 " airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
+
+" youcompleteme
+nmap <leader>f :YcmCompleter GoToDefinition<cr>
+nmap <leader>c :YcmCompleter GoToDeclaration<cr>
 
 " clang-format
-map <c-k> :pyf ~/.vim/python/clang-format.py<cr>
-imap <c-k> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
+map <c-f> :pyf ~/.vim/python/clang-format.py<cr>
+imap <c-f> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
 nmap <F5> :%pyf ~/.vim/python/clang-format.py<cr>
 
 " clang-check
@@ -51,3 +74,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " fugitive
 autocmd QuickFixCmdPost *grep* cwindow
+
+" x2x
+xmap <leader>b  <plug>x2b
+nmap <leader>b  <plug>x2b
+xmap <leader>o  <plug>x2o
+nmap <leader>o  <plug>x2o
+xmap <leader>d  <plug>x2d
+nmap <leader>d  <plug>x2d
+xmap <leader>h  <plug>x2h
+nmap <leader>h  <plug>x2h

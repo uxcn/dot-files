@@ -1,0 +1,31 @@
+/*   
+ *
+ * %License%
+ *
+ */
+
+package %Package%;
+
+/**
+ * ?
+ *
+ * @author $full$
+ */
+public class %Object% {
+
+    /**
+     * Main function.
+     *
+     * @param args
+     * 
+     * @return
+     *
+     * @throws Exception
+     */
+    public static int void main(String[] args) throws Exception {
+
+        return 0;
+
+    }
+
+}

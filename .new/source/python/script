@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+# %File% - ?
+
+# %License%
+
+# author: %user%
+
+import sys
+
+usage="%File% <arg> [arg...]"
