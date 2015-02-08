@@ -1,0 +1,14 @@
+# gcalcli aliases
+
+alias gca="gcalcli"
+
+alias gcm="gca calm"
+alias gcw="gca calw"
+
+alias gcg="gca agenda"
+
+alias gca="gca add"
+alias gce="gca edit"
+alias gcd="gca delte"
+alias gcs="gca search"
+alias gcr="gca remind"

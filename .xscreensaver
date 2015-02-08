@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.26 for jason on Wed May 14 11:48:37 2014.
+# Written by xscreensaver-demo 5.34 for jason on Wed Nov 25 21:43:29 2015.
 # http://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	34
+selected:	118
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -79,7 +79,7 @@ programs:								      \
 - GL: 				moebius -root				    \n\
 				moire -root				    \n\
 - GL: 				morph3d -root				    \n\
-				mountain -root -delay 10000 -ncolors 180    \n\
+				mountain -root -delay 8850 -ncolors 1	    \n\
 				munch -root				    \n\
 				penrose -root				    \n\
 - GL: 				pipes -root				    \n\
@@ -155,7 +155,7 @@ programs:								      \
 				vermiculate -root			    \n\
 				whirlwindwarp -root			    \n\
 				zoom -root				    \n\
-				anemone -root				    \n\
+				anemone -root -width 4			    \n\
 				apollonian -root			    \n\
 - GL: 				boxed -root				    \n\
 - GL: 				cubenetic -root				    \n\
@@ -165,7 +165,7 @@ programs:								      \
 - GL: 				flurry -root				    \n\
 - GL: 				glblur -root				    \n\
 - GL: 				glsnake -root				    \n\
-				halftone -root -delay 50000		    \n\
+				halftone -root -delay 100000		    \n\
 - GL: 				juggler3d -root				    \n\
 - GL: 				lavalite -root				    \n\
 -				polyominoes -root			    \n\
@@ -248,13 +248,25 @@ programs:								      \
 - GL: 				companioncube -root			    \n\
 - GL: 				hilbert -root				    \n\
 - GL: 				tronbit -root				    \n\
-				hexadrop -root				    \n\
+				hexadrop -root -delay 0			    \n\
   GL: 				kaleidocycle -root			    \n\
   GL: 				quasicrystal -root			    \n\
   GL: 				unknownpleasures -root -delay 86903	      \
 				  -count 10 -speed 1.1 -resolution 21	      \
 				  -no-ortho				    \n\
   GL: 				geodesic -root				    \n\
+  GL: 				projectiveplane -root			    \n\
+				tessellimage -root			    \n\
+  GL: 				winduprobot -root			    \n\
+				binaryring -root -growth-delay 46018	      \
+				  -ring-radius 294 -particles-number 500    \n\
+  GL: 				cityflow -root -delay 0 -count 155 -skew      \
+				  0 -wave-speed 5 -wave-radius 54 -waves      \
+				  1 -wireframe				    \n\
+  GL: 				geodesicgears -root			    \n\
+  GL: 				romanboy -root				    \n\
+  GL: 				splitflap -root				    \n\
+				testx11 -root				    \n\
 
 
 pointerPollTime:    0:00:05
@@ -265,4 +277,5 @@ GetViewPortIsFullOfLies:False
 procInterrupts:	True
 xinputExtensionDev: False
 overlayStderr:	True
+authWarningSlack:   20
 

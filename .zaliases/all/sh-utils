@@ -1,0 +1,5 @@
+# sh-utils aliases
+
+alias pm="pm --force"
+alias cpm="cpm --force"
+alias upm="upm --force"

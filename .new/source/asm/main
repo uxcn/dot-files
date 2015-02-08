@@ -3,7 +3,7 @@
 ; %License%
 
 
-; author: $Full$
+; author: %Full%
 
     segment .data
 
@@ -11,6 +11,12 @@
 
     segment .text
 
-    global main
+    global _start
 
-main:
+_start:
+
+_end:
+
+    mov     rax, 60
+
+    syscall

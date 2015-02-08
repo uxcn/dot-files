@@ -1,23 +1,14 @@
-" theme
-colorscheme solarized
-let g:solarized_termcolors=256
-set background=dark
-
 " vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-repeat'
 Plugin 'uxcn/vim-x2x'
 
 filetype plugin indent on
@@ -38,42 +29,27 @@ set smarttab
 set smartindent
 set showcmd
 
-
 set shiftround
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-set textwidth=80
-set pastetoggle=<F2>
 
 set incsearch
 
 set number
+set relativenumber
 syntax on
 
-" airline
-let g:airline#extensions#tabline#enabled=1
-
-" youcompleteme
-nmap <leader>f :YcmCompleter GoToDefinition<cr>
-nmap <leader>c :YcmCompleter GoToDeclaration<cr>
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-y>"
+let g:UltiSnipsJumpForwardTrigger="<c-i>"
+let g:UltiSnipsJumpBackwardTrigger="<c-o>"
 
 " clang-format
-map <c-f> :pyf ~/.vim/python/clang-format.py<cr>
-imap <c-f> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
-nmap <F5> :%pyf ~/.vim/python/clang-format.py<cr>
-
-" clang-check
-nmap <silent> <F10> :call ClangCheck()<cr><cr>
-
-" ultisnips
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" fugitive
-autocmd QuickFixCmdPost *grep* cwindow
+noremap  <leader>f           :pyf ~/.vim/python/clang-format.py<cr>
+inoremap <leader>f      <c-o>:pyf ~/.vim/python/clang-format.py<cr>
+nnoremap <leader>ff          :%pyf ~/.vim/python/clang-format.py<cr>
 
 " x2x
 xmap <leader>b  <plug>x2b

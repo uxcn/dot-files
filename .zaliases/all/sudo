@@ -1,0 +1,6 @@
+# sudo aliases
+
+alias sd="sudo"
+
+alias sdi="sd --login"
+alias sdv="sd visudo"

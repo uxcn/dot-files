@@ -1,0 +1,31 @@
+# portage aliases
+
+# emerge
+
+alias emg="sd emerge"
+
+alias emgS="emg --sync"
+alias emgi="emg --info"
+alias emgr="emg --resume"
+alias emgs="emg --search"
+alias emgp="emg --pretend"
+alias emgd="emg --depclean"
+alias emgu="emg --update --deep --newuse --with-bdeps=y"
+
+alias emgw="emgu @world"
+
+# equery
+
+alias eq="equery"
+
+alias eql="eq list"
+alias equ="eq uses"
+alias eqf="eq files"
+alias eqh="eq hasuse"
+alias eqb="eq belongs"
+alias eqc="eq changes"
+alias eqk="eq keywords"
+
+# revdep-rebuild
+
+alias emrr="sudo revdep-rebuild"

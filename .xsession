@@ -1,13 +1,30 @@
 #!/bin/sh
-/usr/bin/xsri --color=\#1b1b1b
+
+# background
+/usr/bin/xsri --color=\#373737
+
+# compositor
+compton -b
+
+# start xscreensaver
+xscreensaver -no-splash &
+
+#start urxvtd
+/usr/bin/urxvtd -q -f -o
 
 # start synergy client
-/usr/bin/sudo /usr/bin/killall synergys
-/usr/bin/sleep 1
-/usr/bin/synergys 
+#/usr/bin/synergys
 
-/usr/bin/pulseaudio --start --log-target=syslog
-/usr/bin/mpd ~/.mpd/mpd.conf 2>/dev/null
+# start pulseaudio
+/usr/bin/start-pulseaudio-x11 --start --log-target=syslog
 
-exec /usr/bin/xmonad
-#exec /usr/bin/twm
+/usr/bin/xmonad
+
+# stop mpd
+/usr/bin/mpd --kill
+
+# stop pulseaudio
+/usr/bin/pulseaudio --kill
+
+# stop xscreensaver
+/usr/bin/xscreensaver-command -exit

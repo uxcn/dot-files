@@ -1,0 +1,53 @@
+# git aliases
+
+alias g="git"
+
+alias ga="g add"
+
+alias gbr="g branch"
+
+alias gbl="g blame"
+alias gbs="g bisect"
+
+alias gcm="g commit"
+
+alias gcn="g clone --recursive"
+
+alias gco="g checkout"
+
+alias gd="g diff"
+alias gdc="gd --cached"
+alias gdl="gd @~1"
+
+alias gsw="g show"
+
+alias gfc="g fetch"
+alias gfcu="gfc upstream"
+
+alias ghp="g help"
+
+alias glg="g log"
+alias glgn="glg --name-status"
+
+alias gmg="g merge"
+alias gmgu="gmg upstream/master"
+
+alias gpl="g pull"
+alias gps="g push"
+
+alias grb="g rebase"
+
+alias gmv="g mv"
+alias grm="g rm"
+
+alias grs="g reset"
+
+alias gsh="g stash"
+
+alias grt="g remote"
+
+alias gs="g status"
+
+alias gtg="g tag"
+
+alias gun="g reset HEAD"

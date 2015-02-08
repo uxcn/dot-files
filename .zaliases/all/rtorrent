@@ -1,0 +1,3 @@
+# rtorrent aliases
+
+alias rts="screen -r rtorrentd"

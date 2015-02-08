@@ -1,0 +1,9 @@
+# ag aliases
+
+alias aga="ag --all-types"
+
+alias agc="ag --count"
+alias agi="ag --ignore-case"
+
+alias agf="ag --files-with-matches"
+alias agF="ag --files-without-matches"

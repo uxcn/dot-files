@@ -1,0 +1,11 @@
+# ~/.tmuxinator/com.yml
+
+name: com
+root: ~/
+
+windows:
+  - com:
+      layout: even-vertical
+      panes:
+        - mutt
+        - weechat

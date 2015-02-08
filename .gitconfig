@@ -1,9 +1,30 @@
 [core]
-	editor = vim
+ editor = nvim
+[transfer]
+ fsckobjects = true
+[fetch]
+ fsckobjects = true
+[receive]
+  fsckobjects = true 
+[push]
+	default = simple
+[mergetool "fugitive"]
+  cmd = nvim -f -c Gdiff \"$MERGED\"
 [merge]
-	tool = vimdiff
+	tool = fugitive
 [user]
 	name = Jason Schulz
 	email = jason@schulz.name
 [color]
 	ui = true
+[web]
+	browser = /usr/bin/w3m
+[color "diff"]
+	new = green
+	old = magenta
+	frag = white
+[color "status"]
+	added = green
+	updated = green
+	changed = magenta
+	untracked = magenta

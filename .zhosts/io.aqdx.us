@@ -1,0 +1,25 @@
+# funtoo
+
+export FEATURES="-ccache"
+
+# ccache
+
+if [[ -d /dev/hdd ]]; then
+
+  unset FEATURES
+
+  export CCACHE_DIR="/var/ccache/${USER}"
+  export CCACHE_SIZE="4G"
+  export CCACHE_CPP2="1"
+  export CCACHE_COMPRESS="1"
+
+fi
+
+# rtorrent
+
+/bin/stty start undef
+/bin/stty stop undef
+
+# firefox
+
+export MOZ_USE_OMTC=1

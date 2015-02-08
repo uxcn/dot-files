@@ -1,0 +1,6 @@
+# handbrake aliases
+
+alias hb="HandBrakeCLI --format mp4 --encoder x264 --x264-preset veryslow -q 20 --aencoder lame"
+
+alias hbf="hb --x264-tune film"
+alias hba="hb --x264-tune animation"

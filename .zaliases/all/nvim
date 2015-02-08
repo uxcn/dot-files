@@ -1,0 +1,7 @@
+# nvim aliases
+
+files_c="**/*.h **/*.c"
+files_cpp="**/*.h **/*.hpp **/*.hxx **/*.c **/*.cc **/*.cpp **/*.cxx"
+
+alias nvimc="nvim $files_c"
+alias nvimcpp="nvim $files_cpp"

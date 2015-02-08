@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # %File% - ?
 
@@ -9,3 +9,4 @@
 
 '''TODO: description'''
 
+# vim:ft=python:et:ts=4:sts=4:sw=4:tw=80

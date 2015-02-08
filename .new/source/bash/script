@@ -6,9 +6,9 @@
 
 # author: %user%
 
-USAGE="%File% <arg> [arg...]\\n
+USAGE="%File% <cmd> [arg...]\\n
 
-cmd                         \\n
+cmds                        \\n
                             \\n
 cmd\\t- ?"
 
@@ -31,12 +31,12 @@ if [[ ${CMD} == "help" ]]; then
 
 fi
 
-if /usr/bin/which new-${CMD} &>>/dev/null; then
+if /usr/bin/which %File%-${CMD} &>>/dev/null; then
 
-    exec new-${CMD} $*
+    exec %File%-${CMD} "$@"
 
 fi
 
-/bin/echo -e "unknown type: ${CMD}\\n"
+/bin/echo -e "unknown command: ${CMD}\\n"
 /bin/echo -e ${USAGE}
 exit 1

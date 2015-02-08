@@ -1,18 +1,18 @@
 Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
-       , bgColor = "#1b1b1b"
+       , bgColor = "#373737"
        , fgColor = "#657b83"
        , position = TopW L 100
        , lowerOnStart = True
-       , commands = [ Run Weather "KSEA" ["-t","<tempC>","-L","17","-H","25","--normal","#657b83","--high","#859900","--low","#657b83"] 36000
-                    , Run MultiCpu ["-t","<total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%","-L","0","-H","50","--normal","#657b83","--high","#859900","--low","#657b83"] 10
+       , commands = [ Run Weather "KSEA" ["-t","<tempC>","-L","17","-H","25","--normal","#95ffa5","--high","#ff9900","--low","#657b83"] 36000
+                    , Run MultiCpu ["-t","<total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%","-L","50","-H","90","--low","#657b83","--normal","#95ffa5","--high","#ff9900"] 10
                     , Run Memory ["-t","<used>m"] 10
                     , Run Swap ["-t", "<used>m"] 10
                     , Run DynNetwork ["-t", "<rx>k,<tx>k"] 10
 		            , Run BatteryP ["BAT1", "BAT2"] 
                            ["-t", "<timeleft>"] 10
-		            , Run CpuFreq ["-t","<cpu0> <cpu1> <cpu2> <cpu3>","-L","0","-H","2","-l","#657b83","-n","#657b83","-h","#859900"] 50
-                    , Run CoreTemp ["-t","<core0> <core1> <core2> <core3>","-L","40","-H","60","-l","#657b83","-n","#657b83","-h","#859900"] 50 
-                    , Run Date "%Y/%m/%d <fc=#d33682>%H:%M</fc>" "date" 10
+		            , Run CpuFreq ["-t","<cpu0> <cpu1> <cpu2> <cpu3>","-L","0","-H","2","-l","#657b83","-n","#95ffa5","-h","#ff9900"] 50
+                    , Run CoreTemp ["-t","<core0> <core1> <core2> <core3>","-L","60","-H","80","-l","#657b83","-n","#95ffa5","-h","#ff9900"] 50 
+                    , Run Date "%Y/%m/%d <fc=#268bd2>%H:%M</fc>" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"

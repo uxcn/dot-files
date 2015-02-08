@@ -1,0 +1,20 @@
+# general aliases
+
+alias clr="clear"
+
+alias cdh="cd ~hg"
+alias cdg="cd ~git"
+alias cds="cd ~svn"
+alias cdu"cd ~uxcn"
+alias cdd="cd ~/development"
+
+alias ls="ls -hF --color=tty"
+alias la="ls -A"
+alias ll="ls -l"
+alias lr="ls -R"
+
+alias diff="colordiff"
+alias hostname="hostname --fqdn"
+
+alias ps="ps -H -o pid,pri,nice,nlwp,user,group,maj_flt,min_flt,rss,vsz,%cpu,%mem,time,state,cmd"
+alias psc="ps -C"

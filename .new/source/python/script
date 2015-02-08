@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # %File% - ?
 
@@ -8,4 +8,13 @@
 
 import sys
 
-usage="%File% <arg> [arg...]"
+__program__ = '%File%'
+__version__ = '0.0'
+__author__  = '%Full%'
+__doc__     = '%File% <arg> [arg...]'
+
+def usage():
+    print(__doc__)
+    sys.exit(1)
+
+# vim:ft=python:et:ts=4:sts=4:sw=4:tw=80

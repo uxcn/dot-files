@@ -1,0 +1,9 @@
+# strip color
+
+function stripcolor() {
+
+  sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
+
+}
+
+# vim:ft=zsh:et:ts=2:sts=2:sw=2:tw=80

@@ -1,0 +1,31 @@
+# print dir down
+pdown() {
+
+  local p
+  local d
+  local n
+
+  n=${1:-1}
+  p=${PWD}
+
+  if (( n < 0 )); then
+
+    let n="-n"
+    pu $n
+
+    exit 0
+
+  fi
+
+  while (( n-- > 0 )); do
+
+    d="$d/${p%%/*}"
+    p=${p#*/}
+
+  done
+
+  echo "$d"
+
+}
+
+# vim:ft=zsh:et:ts=2:sts=2:sw=2:tw=80
