@@ -10,9 +10,11 @@ alias emgr="emg --resume"
 alias emgs="emg --search"
 alias emgp="emg --pretend"
 alias emgd="emg --depclean"
+alias emgc="emg --usepkg n"
 alias emgu="emg --update --deep --newuse --with-bdeps=y"
 
 alias emgw="emgu @world"
+alias emgb="emgc @preserved-rebuild"
 
 # equery
 
@@ -25,6 +27,15 @@ alias eqh="eq hasuse"
 alias eqb="eq belongs"
 alias eqc="eq changes"
 alias eqk="eq keywords"
+
+# eselect
+
+alias es="eselect"
+alias esb="es binutils"
+alias esj="es java-vm"
+alias esn="es news"
+alias eso="es opengl"
+alias esp="es python"
 
 # revdep-rebuild
 

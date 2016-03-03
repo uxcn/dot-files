@@ -11,11 +11,11 @@ import System.IO
 
 main = do
   xmproc <- spawnPipe "/usr/bin/xmobar /home/jason/.xmobarrc"
-  xmonad $ defaultConfig
-    { normalBorderColor = "#222222"
-    , focusedBorderColor = "#657b83"
-    , manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts  $  layoutHook defaultConfig
+  xmonad $ def
+    { normalBorderColor = "#373737"
+    , focusedBorderColor = "#373737"
+    , manageHook = manageDocks <+> manageHook def
+    , layoutHook = avoidStruts  $  layoutHook def
     , logHook = dynamicLogWithPP $ xmobarPP
       { ppOutput = hPutStrLn xmproc
       , ppCurrent = xmobarColor "#b71fb5" "" . wrap "[" "]"
@@ -27,21 +27,21 @@ main = do
     } `additionalKeys`
     [    ((mod1Mask .|. shiftMask, xK_BackSpace), spawn "/usr/bin/urxvtc")
        , ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
-       , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig
+       , ((mod1Mask .|. shiftMask, xK_p), shellPrompt def
            { bgColor = "#373737"
            , fgColor = "#657b83"
-           , borderColor = "#222222"
+           , borderColor = "#373737"
            }
          )
-       , ((mod1Mask .|. shiftMask, xK_m), prompt "/usr/bin/urxvtc -e mux" defaultXPConfig
+       , ((mod1Mask .|. shiftMask, xK_m), prompt "/usr/bin/urxvtc -e mux" def
            { bgColor = "#373737"
            , fgColor = "#657b83"
-           , borderColor = "#222222"
+           , borderColor = "#373737"
            })
-       , ((mod1Mask .|. shiftMask, xK_r), prompt "/bin/sh rdesktop" defaultXPConfig
+       , ((mod1Mask .|. shiftMask, xK_r), prompt "/bin/sh rdesktop" def
            { bgColor = "#373737"
            , fgColor = "#657b83"
-           , borderColor = "#222222"
+           , borderColor = "#373737"
            })
     ] 
      `additionalKeysP`

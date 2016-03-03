@@ -158,7 +158,7 @@ if ! exists("g:zenburn_high_Contrast")
 endif
 
 if ! exists("g:zenburn_transparent")
-    let g:zenburn_transparent = 0
+    let g:zenburn_transparent = 1
 endif
 
 if ! exists("g:zenburn_color_also_Ignore")
@@ -329,7 +329,7 @@ if exists("g:zenburn_force_dark_Background") && g:zenburn_force_dark_Background
 endif
 
 if exists("g:zenburn_transparent") && g:zenburn_transparent
-    hi Normal             ctermbg=0     guibg=#000000
+    hi Normal             ctermbg=NONE  guibg=#000000
     hi Statement          ctermbg=NONE
     hi Title              ctermbg=NONE
     hi Todo               ctermbg=NONE

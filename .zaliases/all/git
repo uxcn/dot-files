@@ -2,6 +2,8 @@
 
 alias g="git"
 
+alias gi="g init"
+
 alias ga="g add"
 
 alias gbr="g branch"

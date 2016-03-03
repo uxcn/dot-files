@@ -1,0 +1,5 @@
+# elinks aliases
+
+alias elk="elinks"
+
+alias elks="elk https://duckduckgo.com"

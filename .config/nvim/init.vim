@@ -54,6 +54,8 @@ set incsearch
 
 set number
 set relativenumber
+set foldmethod=indent
+set switchbuf=usetab,split
 syntax on
 
 " airline

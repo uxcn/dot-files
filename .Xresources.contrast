@@ -23,8 +23,9 @@
 
 ! urxvt
 
-urxvt*background:              S_gray
+urxvt*background:              rgba:0000/0000/0000/3737
 urxvt*foreground:              S_base00
+urxvt*depth:                   32
 urxvt*fading:                  10
 urxvt*fadeColor:               S_base03
 urxvt*cursorColor:             S_base1
@@ -51,15 +52,13 @@ urxvt*color15:                 S_base3
 
 ! xscreensaver
 
-!xscreensaver.Dialog.headingFont:        -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
-!xscreensaver.Dialog.bodyFont:           -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
-!xscreensaver.Dialog.labelFont:          -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
-!xscreensaver.Dialog.unameFont:          -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
-!xscreensaver.Dialog.buttonFont:         -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
-!xscreensaver.Dialog.dateFont:           -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.headingFont:        -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
+xscreensaver.Dialog.bodyFont:           -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.labelFont:          -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.unameFont:          -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.buttonFont:         -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
+xscreensaver.Dialog.dateFont:           -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
 
-!xscreensaver.Dialog.logo.width:         0
-!xscreensaver.Dialog.logo.height:        0
 xscreensaver.Dialog.foreground:         S_lightgray
 xscreensaver.Dialog.background:         S_gray
 xscreensaver.Dialog.topShadowColor:     S_gray
@@ -72,7 +71,7 @@ xscreensaver.Dialog.internalBorderWidth:0
 xscreensaver.Dialog.borderWidth:        0
 xscreensaver.Dialog.shadowThickness:    2
 
-!xscreensaver.passwd.passwdFont:         -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
+xscreensaver.passwd.passwdFont:         -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
 xscreensaver.passwd.thermometer.foreground:  S_red
 xscreensaver.passwd.thermometer.background:  S_gray
 xscreensaver.passwd.thermometer.width:       0
