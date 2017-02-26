@@ -1,22 +1,24 @@
-Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
+Config { font = "xft:Droid Sans Mono Slashed:style=Regular:size=10"
        , bgColor = "#373737"
-       , fgColor = "#657b83"
+       , fgColor = "#798f97"
+       , overrideRedirect = False
        , position = TopW L 100
        , lowerOnStart = True
-       , commands = [ Run Weather "KSEA" ["-t","<tempC>","-L","17","-H","25","--normal","#95ffa5","--high","#ff9900","--low","#657b83"] 36000
-                    , Run MultiCpu ["-t","<total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%","-L","50","-H","90","--low","#657b83","--normal","#95ffa5","--high","#ff9900"] 10
-                    , Run Memory ["-t","<used>m"] 10
-                    , Run Swap ["-t", "<used>m"] 10
-                    , Run DynNetwork ["-t", "<rx>k,<tx>k"] 10
-		            , Run BatteryP ["BAT1", "BAT2"] 
-                           ["-t", "<timeleft>"] 10
-		            , Run CpuFreq ["-t","<cpu0> <cpu1> <cpu2> <cpu3>","-L","0","-H","2","-l","#657b83","-n","#95ffa5","-h","#ff9900"] 50
-                    , Run CoreTemp ["-t","<core0> <core1> <core2> <core3>","-L","60","-H","80","-l","#657b83","-n","#95ffa5","-h","#ff9900"] 50 
-                    , Run Date "%Y/%m/%d <fc=#268bd2>%H:%M</fc>" "date" 10
+       , commands = [ Run Weather "KSEA" ["-t","<tempC>","-L","17","-H","25","--normal","#95cfa5","--high","#cc2626","--low","#798f97"] 36000
+                    , Run MultiCpu ["-t","<total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%","-L","50","-H","90","--low","#798f97","--normal","#95cfa5","--high","#cc2626"] 10
+                    , Run Memory ["-t","<used>M","-L","2048","-H","8192","--low","#798f97","--normal","#95cfa5","--high","#cc2626" ] 10
+                    , Run Swap ["-t", "<used>M","-L","2048","-H","8192","--low","#798f97","--normal","#95cfa5","--high","#cc2626" ] 10
+                    , Run DiskU [("/", "<used>") ] ["-L","64","-H","96","--low","#798f97","--normal","#95cfa5","--high","#cc2626" ] 10
+                    , Run DynNetwork ["-t", "<dev> <rx>kb <tx>kb"] 10
+                    , Run Wireless "wlp2s0" ["-t", "<essid>"] 10
+                    , Run BatteryP ["BAT1", "BAT2"] ["-t", "<timeleft>"] 10
+                    , Run CpuFreq ["-t","<cpu0> <cpu1> <cpu2> <cpu3>","-L","0","-H","2","-l","#798f97","-n","#95cfa5","-h","#cc2626"] 50
+                    , Run CoreTemp ["-t","<core0> <core1> <core2> <core3>","-L","60","-H","80","-l","#798f97","-n","#95cfa5","-h","#cc2626"] 50
+                    , Run Date "%Y/%m/%d <fc=#268be2>%H:%M</fc>" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %multicpu% # %memory% / %swap% # %coretemp% # %battery%            %date%" 
+       , template = "%StdinReader% }{ %multicpu% : %coretemp% : %memory% : %swap% : %disku% : %wlp2s0wi% : %dynnetwork% : %battery%            %date%"
        }
        

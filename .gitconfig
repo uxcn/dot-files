@@ -20,11 +20,12 @@
 [web]
 	browser = /usr/bin/w3m
 [color "diff"]
-	new = green
-	old = magenta
+	new = white
+	old = bold cyan
 	frag = white
+  meta = white
 [color "status"]
-	added = green
-	updated = green
-	changed = magenta
-	untracked = magenta
+	added = white
+	updated = white
+	changed = bold cyan
+	untracked = bold cyan

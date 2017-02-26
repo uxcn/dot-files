@@ -1,4 +1,5 @@
-# down dir function
+# directory down
+
 down() {
   
   # cd n dirs down
@@ -6,5 +7,7 @@ down() {
   cd `pdown $1`
 
 }
+
+alias dnh="cd ~"
 
 # vim:ft=zsh:et:ts=2:sts=2:sw=2:tw=80

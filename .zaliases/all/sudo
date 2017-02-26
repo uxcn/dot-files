@@ -1,6 +1,10 @@
 # sudo aliases
 
-alias sd="sudo"
+alias so="sudo"
 
-alias sdi="sd --login"
-alias sdv="sd visudo"
+alias soi="so --login"
+alias soe="so --edit"
+alias sop="so --preserve-env"
+alias sos="so --shell --preserve-env"
+
+alias sov="so visudo"

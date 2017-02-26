@@ -1,0 +1,29 @@
+# apt
+
+alias apg="apt-get"
+
+alias apgu="apg update"
+alias apgd="apg upgrade"
+alias apgi="apg install"
+alias apgs="apg source"
+alias apgr="apg remove"
+alias apga="apg autoremove"
+
+alias apc="apt-cache"
+
+alias apcs="apc search"
+alias apcd="apc depends"
+alias apcr="apc rdepends"
+alias apcg="apc pkgnames"
+alias apcp="apc policy"
+alias apcw="apc show"
+
+# dpkg
+
+alias dpg="dpkg"
+
+alias dpgt="dpg --status"
+alias dpgs="dpg --search"
+alias dpgp="dpg --print-avail"
+alias dpgl="dpg --list"
+alias dpglf="dpg --listfiles"

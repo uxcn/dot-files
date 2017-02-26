@@ -1,9 +1,10 @@
-# up dir
+# directory up
+
 up() {
 
   # cd n dirs up
 
-  cd `pup $1`
+  cd "`pup $1`"
 
 }
 

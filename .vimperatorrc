@@ -1,5 +1,9 @@
-"3.9 (created: 2015/02/15 15:49:05)
 
 colorscheme contrast
+
+" navigation
+
+:nnoremap <H> :ba
+:nnoremap <L> :fo
 
 " vim:ft=vimperator

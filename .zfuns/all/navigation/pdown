@@ -1,4 +1,5 @@
-# print dir down
+# directory down print
+
 pdown() {
 
   local p

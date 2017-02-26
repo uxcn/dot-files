@@ -1,18 +1,20 @@
 # general aliases
 
 alias clr="clear"
+alias wtc="watch -c"
 
 alias cdh="cd ~hg"
 alias cdg="cd ~git"
 alias cds="cd ~svn"
-alias cdu"cd ~uxcn"
+alias cdu="cd ~uxcn"
 alias cdd="cd ~/development"
 
-alias ls="ls -hF --color=tty"
+alias ls="ls -hF --color"
 alias la="ls -A"
 alias ll="ls -l"
 alias lr="ls -R"
 
+alias less="less -R"
 alias diff="colordiff"
 alias hostname="hostname --fqdn"
 

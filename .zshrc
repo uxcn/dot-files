@@ -4,10 +4,10 @@ typeset -U path
 typeset -U fpath
 typeset -U manpath
 
-host=`hostname --fqdn` 
+host=`hostname --fqdn`
 
-path=( ~/bin ~/bin/* $path )
-fpath=( ~/.zfuns/$host $fpath )
+path=( ~/bin $path )
+fpath=( ~/.zfuns/$host ~/.zfuns/$host/* $fpath )
 manpath=( ~/share/man $manpath )
 
 # test if shell interactive
@@ -18,7 +18,17 @@ fi
 
 # init
 
-autoload -U compinit; compinit
+autoload -U compinit; compinit -u
+
+# environment
+
+if test -d ~/.zenv/$host; then
+
+  for a in ~/.zenv/$host/*(@); do
+    . $a
+  done
+
+fi
 
 # aliases
 
@@ -35,6 +45,7 @@ fi
 if test -d ~/.zfuns/$host; then
 
   autoload -U ~/.zfuns/$host/*(:t)
+  autoload -U ~/.zfuns/$host/*/*(:t)
 
 fi
 
@@ -68,13 +79,13 @@ setopt share_history
 setopt append_history
 setopt inc_append_history
 
-# environment vars
+# environment
 
 export LC_ALL="en_US.UTF-8"
 
-# general
+# man pager
 
-export EDITOR=nvim
+export MANPAGER="most -c"
 
 # gnupg
 
@@ -82,13 +93,5 @@ export GPG_TTY=$(/usr/bin/tty)
 
 # compiler
 
-export CC="clang"
-export CXX="clang++"
-
-# development
-
-hg=~/development/hg
-git=~/development/git
-svn=~/development/svn
-
-uxcn=~git/uxcn
+export CC="gcc"
+export CXX="g++"

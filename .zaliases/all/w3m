@@ -1,3 +1,3 @@
 # w3m aliases
 
-alias wb="w3m -B"
+alias wmb="w3m -B"

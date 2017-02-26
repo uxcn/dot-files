@@ -1,0 +1,32 @@
+# systemd
+
+alias syd="systemctl"
+
+alias syde="syd enable"
+alias sydd="syd disable"
+
+alias sydk="syd kill"
+alias syds="syd start"
+alias sydt="syd stop"
+alias sydo="syd reload"
+alias sydr="syd restart"
+alias syda="syd status"
+alias sydw="syd show"
+
+alias sydlu="syd list-units"
+alias sydls="syd list-sockets"
+alias sydlt="syd list-timers"
+
+# systemd (journal)
+
+alias jrn="journalctl"
+
+alias jrnf="jrn --follow"
+
+# systemd (login)
+
+alias lgn="loginctl"
+
+# systemd (network)
+
+alias nwk="networkctl"

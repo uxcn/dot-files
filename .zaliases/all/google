@@ -1,0 +1,32 @@
+# google command aliases
+
+# goobook
+
+alias gbk="goobook"
+
+alias gbka="gbk add"
+alias gbkr="gbk reload"
+alias gbkq="gbk query"
+alias gbkh="gbk help"
+alias gbkdc="gbk dump_contacts"
+alias gbkdg="gbk dump_groups"
+alias gbkdq="gbk dquery"
+
+# gcalcli
+
+alias gca="gcalcli"
+
+alias gcal="gca list"
+
+alias gcam="gca calm"
+alias gcaw="gca calw"
+
+alias gcag="gca agenda"
+
+alias gcaa="gca add"
+alias gcae="gca edit"
+alias gcad="gca delte"
+alias gcas="gca search"
+alias gcar="gca remind"
+
+alias gcapa="gca add --includeRc ~/.gcalclirc.personal"

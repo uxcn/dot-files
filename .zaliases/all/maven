@@ -1,0 +1,5 @@
+# mvn
+
+alias mvnds="mvn dependency:sources"
+alias mvndd="mvn dependency:resolve -Dclassifier=javadoc"
+alias mvnst="mvn -DskipTests=true -Dmaven.javadoc.skip=true"

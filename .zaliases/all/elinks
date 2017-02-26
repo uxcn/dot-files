@@ -1,5 +1,6 @@
 # elinks aliases
 
-alias elk="elinks"
+alias enks="elinks"
 
-alias elks="elk https://duckduckgo.com"
+alias enksd="enks https://ddg.gg"
+alias enksg="enks https://google.com"

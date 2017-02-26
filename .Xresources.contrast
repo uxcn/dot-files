@@ -11,6 +11,7 @@
 #define S_mint          #95ffa5
 #define S_gray          #373737
 #define S_lightgray     #585858
+#define S_white         #c0c0c0
 
 #define S_base03        #002b36
 #define S_base02        #073642
@@ -21,10 +22,20 @@
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
+! xft
+
+xft*antialias:         true
+xft*autohint:          false
+xft*dpi:               140
+xft*rgba:              rgb
+xft*hinting:           true
+xft*hintStyle:         hintfull
+xft*lcdfilter:         lcddefault
+
 ! urxvt
 
-urxvt*background:              rgba:0000/0000/0000/3737
-urxvt*foreground:              S_base00
+urxvt*background:              rgba:3737/3737/3737/7878
+urxvt*foreground:              S_white
 urxvt*depth:                   32
 urxvt*fading:                  10
 urxvt*fadeColor:               S_base03
@@ -32,6 +43,11 @@ urxvt*cursorColor:             S_base1
 urxvt*scrollBar:               false
 urxvt*pointerColorBackground:  S_base01
 urxvt*pointerColorForeground:  S_base1
+
+urxvt*font:                    xft:Droid Sans Mono Slashed:style=Regular:size=10
+urxvt*boldFont:                xft:Droid Sans Mono:style=Bold:size=10
+urxvt*italicFont:              xft:Droid Sans Mono:style=Italic:size=10
+urxvt*boldItalicFont:          xft:Droid Sans Mono:style=Bold Italic:size=10
 
 urxvt*color0:                  S_base02
 urxvt*color1:                  S_red

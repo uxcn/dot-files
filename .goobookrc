@@ -1,0 +1,4 @@
+[DEFAULT]
+machine: google.com
+filter_groupless_contacts: no
+

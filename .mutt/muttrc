@@ -40,9 +40,9 @@ set pager_index_lines=32
 
 set index_format="%[%m-%d (%H:%M)] %Z %-15.15L (%4l) %s"
 
-set sidebar_width = 48
-set sidebar_delim = '  |'
+set sidebar_width = 24
 set sidebar_visible = yes
+set sidebar_format = "%B% %> %n"
 
 set status_chars = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
@@ -88,9 +88,9 @@ bind index,pager    G         imap-fetch-mail
 
 # google contacts
 
-set query_command="/usr/bin/goobook query '%s'"
+set query_command="goobook query '%s'"
 
-macro index,pager   a         "<pipe-message>/usr/bin/goobook add<enter>"                                             "add to address book"
+macro index,pager   a         "<pipe-message>goobook add<enter>"                                                      "add to address book"
 
 bind editor         <tab>     complete-query
 
@@ -119,17 +119,13 @@ unset record
 mailboxes =INBOX \
           =[Gmail]/Drafts \
           =[Gmail]/Sent\ Mail \
+          =[Gmail]/Spam \
           =[Gmail]/Trash \
-          =family \
           =personal \
-          =ulz\ group \
-          =google \
+          =family \
+          =acm \
           =bugs \
-          =github \
-          =pypi \
-          =kernel \
-          =gentoo \
-          =funtoo \
           =vim \
           =neovim \
+          =github \
 

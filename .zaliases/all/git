@@ -8,6 +8,8 @@ alias ga="g add"
 
 alias gbr="g branch"
 
+alias gbrd="gbr -D"
+
 alias gbl="g blame"
 alias gbs="g bisect"
 
@@ -44,11 +46,11 @@ alias grm="g rm"
 
 alias grs="g reset"
 
+alias gs="g status"
+
 alias gsh="g stash"
 
 alias grt="g remote"
-
-alias gs="g status"
 
 alias gtg="g tag"
 

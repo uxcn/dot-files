@@ -1,4 +1,4 @@
-# Example colordiffrc file for light backgrounds
+# Example colordiffrc file for dark backgrounds
 #
 # Set banner=no to suppress authorship info at top of
 # colordiff output
@@ -23,7 +23,7 @@ diff_cmd=diff
 # this, use the default output colour"
 #
 plain=off
-newtext=darkgreen
-oldtext=darkmagenta
-diffstuff=darkwhite
-cvsstuff=darkgreen
+newtext=white
+oldtext=cyan
+diffstuff=white
+cvsstuff=white

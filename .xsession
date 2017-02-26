@@ -1,7 +1,21 @@
-#!/bin/sh
+#!/bin/zsh -li
+
+if test -e /dev/dri/card0 &&
+   test -e /dev/dri/card1 &&
+   test -e /dev/dri/card2; then
+
+    /usr/bin/xrandr --setprovideroutputsource 1 0
+    /usr/bin/xrandr --output DVI-1-0 --auto --output DP2 --auto --left-of DVI-1-0 --output LVDS1 --auto --left-of DP2
+
+else
+
+    /usr/bin/xrandr --output LVDS1 --auto
+
+fi
+
 
 # background
-/usr/bin/xsri --color=\#373737
+hsetroot -solid \#373737
 
 # compositor
 compton -b
@@ -9,22 +23,25 @@ compton -b
 # start xscreensaver
 xscreensaver -no-splash &
 
-#start urxvtd
-/usr/bin/urxvtd -q -f -o
+# start urxvtd
+urxvtd -q -f -o
 
-# start synergy client
-#/usr/bin/synergys
+# start synergy server
+synergys
 
 # start pulseaudio
-/usr/bin/start-pulseaudio-x11 --start --log-target=syslog
+start-pulseaudio-x11 --start --log-target=syslog
 
-/usr/bin/xmonad
+xmonad
+
+# stop synergy server
+pkill synergys
 
 # stop mpd
-/usr/bin/mpd --kill
+mpd --kill
 
 # stop pulseaudio
-/usr/bin/pulseaudio --kill
+pulseaudio --kill
 
 # stop xscreensaver
-/usr/bin/xscreensaver-command -exit
+xscreensaver-command -exit

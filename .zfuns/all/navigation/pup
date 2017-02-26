@@ -1,4 +1,5 @@
-# print dir up
+# directory up print
+
 pup() {
 
   local p

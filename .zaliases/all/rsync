@@ -1,0 +1,6 @@
+# rsync
+
+alias rsc="rsync"
+
+alias rsca="rsc --archive"
+alias rscap="rsca --progress"

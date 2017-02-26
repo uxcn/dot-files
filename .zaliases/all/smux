@@ -1,0 +1,3 @@
+# smux aliases
+
+alias aqdx="smux -s aqdx.us io at fj"

@@ -1,4 +1,7 @@
 # navigation aliases
 
+alias uph="cd ~"
+alias dnh="cd ~"
+
 alias dn="down"
 alias pdn="pdown"

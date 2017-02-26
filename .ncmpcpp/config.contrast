@@ -12,25 +12,25 @@
 ## line setting for alternative location to config
 ## file which defines that while launching ncmpcpp.
 
-ncmpcpp_directory = "~/.ncmpcpp"
+ncmpcpp_directory = ~/.ncmpcpp
 
 ## Directory for storing downloaded lyrics. It
 ## defaults to ~/.lyrics since other MPD clients
 ## (eg. ncmpc) also use that location.
 
-lyrics_directory = "~/.ncmpcpp/lyrics"
+lyrics_directory = ~/.ncmpcpp/lyrics
 
 ##### connection settings #####
 
-mpd_host = "/home/jason/.mpd/socket"
+mpd_host = ~/.mpd/socket
 
 #mpd_port = 6600
 
-mpd_connection_timeout = "60"
+mpd_connection_timeout = 60
 
 ## Needed for tag editor and file operations to work.
 
-mpd_music_dir = "~/multimedia/audio/music/views/master"
+mpd_music_dir = ~/multimedia/audio/music/views/master
 
 #mpd_crossfade_time = 5
 
@@ -85,11 +85,17 @@ mpd_music_dir = "~/multimedia/audio/music/views/master"
 ## Note: To enable spectrum frequency visualization
 ## you need to compile ncmpcpp with fftw3 support.
 
-## Available values: spectrum, wave.
+## Available values: spectrum, wave, wave_filled, ellipse.
 
 #visualizer_type = wave
 
 #visualizer_look = ●▮
+
+#visualizer_color = blue, cyan, green, yellow, magenta, red
+
+## Alternative subset of 256 colors for terminals that support it.
+
+visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 
 ##### system encoding #####
 
@@ -113,7 +119,7 @@ mpd_music_dir = "~/multimedia/audio/music/views/master"
 ## Time of inactivity (in seconds) after playlist
 ## highlighting will be disabled (0 = always on).
 
-playlist_disable_highlight_delay = "1"
+playlist_disable_highlight_delay = 0
 
 ## Defines how long messages are supposed to be visible.
 
@@ -121,7 +127,7 @@ playlist_disable_highlight_delay = "1"
 
 ##### song format #####
 
-## for song format you can use:
+## For a song format you can use:
 
 ## %l - length
 ## %f - filename
@@ -188,15 +194,15 @@ playlist_disable_highlight_delay = "1"
 ## Note: colors can be nested.
 
 
-song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+song_list_format = {%a - }{%t}|{$(8)%f$(end)}$R{$(3)(%l)$(end)}
 
-song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+song_status_format = {{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}
 
-song_library_format = "{%n - }{%t}|{%f}"
+song_library_format = {%n - }{%t}|{%f}
 
-alternative_header_first_line_format = "$b$1$aqqu$/a$9 {$7%t$9}|{%f} $1$atqq$/a$9$/b"
+alternative_header_first_line_format = $b$(8)$aqqu$/a$(end) {$(15)%t$(end)}|{%f} $(8)$atqq$/a$(end)$/b
 
-alternative_header_second_line_format = "{{$b%a$/b}{ - $3%b$9}{ ($7%y$9)}}|{%D}"
+alternative_header_second_line_format = {{$(8)%a$/b$(end)}{ - $(8)%b$(end)}{ ($(15)%y$(end))}}|{%D}
 
 #now_playing_prefix = $b
 
@@ -263,7 +269,7 @@ alternative_header_second_line_format = "{{$b%a$/b}{ - $3%b$9}{ ($7%y$9)}}|{%D}"
 ##   not available.
 
 
-song_columns_list_format = "(7f)[white]{l} (25)[cyan]{a} (40)[default]{t} (30)[default]{b}"
+song_columns_list_format = (7f)[15]{l} (25)[15]{a} (40)[15]{t} (30)[15]{b}
 
 ##### various settings #####
 
@@ -310,7 +316,7 @@ song_columns_list_format = "(7f)[white]{l} (25)[cyan]{a} (40)[default]{t} (30)[d
 
 progressbar_look = ->
 
-progressbar_boldness = yes
+progressbar_boldness = no
 
 ## Available values: database, playlist.
 
@@ -415,7 +421,7 @@ display_bitrate = yes
 
 ## Available values: none, basic, extended, perl.
 
-#regular_expressions = basic
+#regular_expressions = perl
 
 
 ## Note: If below is enabled, ncmpcpp will ignore leading
@@ -430,7 +436,7 @@ mouse_support = yes
 
 #mouse_list_scroll_whole_page = yes
 
-#empty_tag_marker = <empty>
+empty_tag_marker = <null>
 
 #tags_separator = " | "
 
@@ -479,21 +485,37 @@ use_console_editor = yes
 ## default background color, or all pairs from 1_1 up to 254_127,
 ## depending on the ncurses version used.
 
-colors_enabled = "yes"
-empty_tag_color = "cyan"
-header_window_color = "default"
-volume_color = "default"
-state_line_color = "default"
-state_flags_color = "default"
-main_window_color = "default"
-color1 = "white"
-color2 = "cyan"
-main_window_highlight_color = "default"
-progressbar_color = "black"
-progressbar_elapsed_color = "default"
-statusbar_color = "default"
-alternative_ui_separator_color = "default"
-active_column_color = "green"
-visualizer_color = "yellow"
-window_border_color = "white"
-active_window_border = "white"
+
+colors_enabled = yes
+
+empty_tag_color = 15
+
+header_window_color = 15
+
+volume_color = 15
+
+state_line_color = default
+
+state_flags_color = 15
+
+main_window_color = 15
+
+color1 = 8
+
+color2 = 5
+
+main_window_highlight_color = 15
+
+progressbar_color = default
+
+progressbar_elapsed_color = 8
+
+statusbar_color = 15
+
+alternative_ui_separator_color = default
+
+active_column_color = 8
+
+window_border_color = 8
+
+active_window_border = 8
