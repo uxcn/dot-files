@@ -64,6 +64,9 @@ set foldmethod=indent
 set switchbuf=usetab,split
 syntax on
 
+" leader
+let mapleader=","
+
 " helpers
 command! Filetypes :echo join(map(split(globpath(&rtp, 'ftplugin/*.vim'), '\n'), 'fnamemodify(v:val, ":t:r")'), "\n")
 
@@ -79,7 +82,25 @@ let g:UltiSnipsExpandTrigger="<c-y>"
 let g:UltiSnipsJumpForwardTrigger="<c-i>"
 let g:UltiSnipsJumpBackwardTrigger="<c-o>"
 
-"search
+" commands
+cabbrev vsbuffer vertical sbuffer
+cabbrev help tab help
+
+" navigation
+nnoremap <silent> <leader>o  :open<space>
+nnoremap <silent> <leader>t  :tabnew<cr>
+nnoremap <silent> <leader>q  :quit<cr>
+nnoremap <silent> <leader>qa :quitall<cr>
+nnoremap <silent> <leader>wa :writeall<cr>
+
+" delete
+nnoremap <silent> x "_x
+nnoremap <silent> <leader>x x
+
+nnoremap <silent> d "_d
+nnoremap <silent> <leader>d d
+
+" search
 nnoremap <silent> <leader>n :%s///gn<cr>
 nnoremap <silent> <c-n>     :nohlsearch<cr>
 
@@ -87,11 +108,15 @@ nnoremap <silent> <c-n>     :nohlsearch<cr>
 inoremap <silent> <f3> <c-o>:set nopaste<cr><c-r>+
 inoremap <silent> <f4> <c-o>:set paste<cr><c-r>+<c-o>:set nopaste<cr>
 
-"nerdtree
+" nerdtree
 nnoremap <silent> <leader>ntt :NERDTreeToggle<cr>
 
+" fzf
+nnoremap <silent> <leader>fzf :FZF<cr>
+nnoremap <silent> <leader>fzfw :Windows<cr>
+
 " eclim
-let g:EclimBrowser = '/usr/bin/chromium'
+let g:EclimBrowser = 'tmux new-window elinks'
 let g:EclimCompletionMethod = 'omnifunc'
 let g:EclimProjectTreeActions = [ {'pattern': '.*', 'name': 'Edit', 'action': 'edit'} ]
 let g:EclimJavaSearchSingleResult = 'edit'
@@ -106,7 +131,16 @@ nnoremap      <silent> <leader>ejff   :%JavaFormat<cr>
 
 nnoremap      <silent> <leader>eji    :JavaImport<cr>
 nnoremap      <silent> <leader>ejio   :JavaImportOrganize<cr>
-nnoremap      <silent> <leader>ejc    :JavaCorrect<cr>
+nnoremap      <silent> <leader>ejct   :JavaCorrect<cr>
+
+nnoremap               <leader>ejn    :JavaNew<space>
+nnoremap               <leader>ejnc   :JavaNew class<space>
+nnoremap               <leader>ejna   :JavaNew abstract<space>
+nnoremap               <leader>ejni   :JavaNew interface<space>
+nnoremap               <leader>ejne   :JavaNew enum<space>
+nnoremap               <leader>ejna   :JavaNew @interface<space>
+
+nnoremap               <leader>ejr    :JavaRename<space>
 
 nnoremap      <silent> <leader>ejc    :JavaConstructor<cr>
 nnoremap      <silent> <leader>ejci   :JavaConstructor!<cr>
@@ -157,11 +191,8 @@ nnoremap      <silent> <leader>ejscv  :JavaSearchContext -a vsplit<cr>
 
 nnoremap      <silent> <leader>ejdc   :JavaDocComment<cr>
 
+nnoremap      <silent> <leader>ejdp   :JavaDocPreview<cr>
 nnoremap      <silent> <leader>ejds   :JavaDocSearch<cr>
-
-nnoremap      <silent> <leader>ejdst  :JavaDocSearch -a tabnew<cr>
-nnoremap      <silent> <leader>ejdss  :JavaDocSearch -a split<cr>
-nnoremap      <silent> <leader>ejdsv  :JavaDocSearch -a vsplit<cr>
 
 " youcompleteme
 nnoremap     <silent> <leader>yc  :YcmCompleter GoToDeclaration<cr>
@@ -173,7 +204,7 @@ inoremap <silent> <leader>cf      <c-o>:pyf ~/.config/nvim/python/clang-format.p
 nnoremap <silent> <leader>cff          :%pyf ~/.config/nvim/python/clang-format.py<cr>
 
 " gundo
-nnoremap <silent> <leader>gg :GundoToggle<cr>
+nnoremap <silent> <leader>gut :GundoToggle<cr>
 
 " fugitive
 nnoremap <silent> <leader>fdgt   :diffget //2<cr>
@@ -182,7 +213,7 @@ nnoremap <silent> <leader>fdgm   :diffget //3<cr>
 autocmd QuickFixCmdPost *grep* cwindow
 
 " tasks
-nnoremap <silent> <leader>t :Ag \(FIXME\)\\|\(TODO\)<cr>
+nnoremap <silent> <leader>td :Ag \(FIXME\)\\|\(TODO\)<cr>
 
 " x2x
 xnoremap <leader>xb  <plug>x2b
