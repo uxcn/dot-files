@@ -1,0 +1,98 @@
+! sakura color scheme for X
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_sakura        #ff99ec
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+#define S_mint          #95ffa5
+#define S_darkgray      #373737
+#define S_lightgray     #686868
+#define S_white         #c0c0c0
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+! xft
+
+xft*antialias:         true
+xft*autohint:          false
+xft*dpi:               140
+xft*rgba:              rgb
+xft*hinting:           true
+xft*hintStyle:         hintfull
+xft*lcdfilter:         lcddefault
+
+! urxvt
+
+urxvt*loginShell:              true
+urxvt*background:              rgba:3737/3737/3737/7878
+urxvt*foreground:              S_white
+urxvt*depth:                   32
+urxvt*fading:                  10
+urxvt*fadeColor:               S_base03
+urxvt*cursorColor:             S_base1
+urxvt*scrollBar:               false
+urxvt*pointerColorBackground:  S_base01
+urxvt*pointerColorForeground:  S_base1
+
+urxvt*font:                    xft:Droid Sans Mono Slashed:style=Regular:size=10
+urxvt*boldFont:                xft:Droid Sans Mono:style=Bold:size=10
+urxvt*italicFont:              xft:Droid Sans Mono:style=Italic:size=10
+urxvt*boldItalicFont:          xft:Droid Sans Mono:style=Bold Italic:size=10
+
+urxvt*color0:                  S_base02
+urxvt*color1:                  S_red
+urxvt*color2:                  S_green
+urxvt*color3:                  S_yellow
+urxvt*color4:                  S_blue
+urxvt*color5:                  S_sakura
+urxvt*color6:                  S_cyan
+urxvt*color7:                  S_base2
+urxvt*color8:                  S_base03
+urxvt*color9:                  S_orange
+urxvt*color10:                 S_lightgray
+urxvt*color11:                 S_base00
+urxvt*color12:                 S_white
+urxvt*color13:                 S_violet
+urxvt*color14:                 S_base1
+urxvt*color15:                 S_base3
+
+! xscreensaver
+
+xscreensaver.Dialog.headingFont:        -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
+xscreensaver.Dialog.bodyFont:           -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.labelFont:          -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.unameFont:          -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xscreensaver.Dialog.buttonFont:         -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
+xscreensaver.Dialog.dateFont:           -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+
+xscreensaver.Dialog.foreground:         S_lightgray
+xscreensaver.Dialog.background:         S_darkgray
+xscreensaver.Dialog.topShadowColor:     S_darkgray
+xscreensaver.Dialog.bottomShadowColor:  S_darkgray
+xscreensaver.Dialog.Button.foreground:  S_lightgray
+xscreensaver.Dialog.Button.background:  S_darkgray
+xscreensaver.Dialog.text.foreground:    S_lightgray
+xscreensaver.Dialog.text.background:    S_darkgray
+xscreensaver.Dialog.internalBorderWidth:0
+xscreensaver.Dialog.borderWidth:        0
+xscreensaver.Dialog.shadowThickness:    2
+
+xscreensaver.passwd.passwdFont:         -adobe-helvetica-bold-o-normal--12-120-120-75-75-p-92-iso8859-1
+xscreensaver.passwd.thermometer.foreground:  S_red
+xscreensaver.passwd.thermometer.background:  S_darkgray
+xscreensaver.passwd.thermometer.width:       0
+
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
