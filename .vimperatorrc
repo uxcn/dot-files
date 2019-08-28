@@ -1,9 +1,0 @@
-
-colorscheme contrast
-
-" navigation
-
-:nnoremap <H> :ba
-:nnoremap <L> :fo
-
-" vim:ft=vimperator
