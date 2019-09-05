@@ -1,0 +1,29 @@
+let configpath = "/home/jason/.config/cvim/cvimrc"
+set localconfig
+
+" settings
+set noautofocus
+let defaultengine = "google"
+let barposition = "bottom"
+let mapleader = ","
+
+" navigation 
+map h goBack
+map l goForward
+map H :tabprevious<cr>
+map L :tabnext<cr>
+
+map <leader>n :new <space>
+map <leader>i :new| <space>
+map <leader>f :file <space>
+map <leader>b :tabnew& <space>
+map <leader>d :tabdetach<cr>
+map <leader>q :quit<cr>
+
+" search
+map <leader>g    :open google <space>
+map <leader>gt   :tabnew google <space>
+map <leader>wp   :open wikipedia <space>
+map <leader>wpt  :tabnew wikipedia <space>
+map <leader>wt   :open wiktionary <space>
+map <leader>wtt  :tabnew wiktionary <space>
