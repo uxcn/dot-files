@@ -1,33 +1,38 @@
+" vim-plug
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+Plug 'rking/ag.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'uxcn/vim-x2x'
+Plug 'simnalamburt/vim-mundo'
+Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
 " theme
-colorscheme zenburn
+colorscheme gruvbox
 set background=dark
 
-" vundle
-filetype off
-set rtp+=/home/jason/.config/nvim/bundle/vundle
-call vundle#rc()
-
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-sleuth'
-Plugin 'rking/ag.vim'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'uxcn/vim-x2x'
-Plugin 'simnalamburt/vim-mundo'
-Plugin 'christoomey/vim-tmux-navigator'
+" transparency (background)
+command! Transparent highlight Normal ctermbg=none guibg=none
 
 filetype plugin indent on
 
@@ -43,8 +48,6 @@ set sidescrolloff=5
 
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
-set smarttab
-set smartindent
 set showcmd
 
 
@@ -114,6 +117,9 @@ nnoremap <silent> <leader>ntt :NERDTreeToggle<cr>
 " fzf
 nnoremap <silent> <leader>fzf :FZF<cr>
 nnoremap <silent> <leader>fzfw :Windows<cr>
+
+" youcompleteme
+let g:ycm_confirm_extra_conf = 0
 
 " eclim
 let g:EclimBrowser = 'tmux new-window elinks'
@@ -216,11 +222,11 @@ autocmd QuickFixCmdPost *grep* cwindow
 nnoremap <silent> <leader>td :Ag \(FIXME\)\\|\(TODO\)<cr>
 
 " x2x
-xnoremap <leader>xb  <plug>x2b
-nnoremap <leader>xb  <plug>x2b
-xnoremap <leader>xo  <plug>x2o
-nnoremap <leader>xo  <plug>x2o
-xnoremap <leader>xd  <plug>x2d
-nnoremap <leader>xd  <plug>x2d
-xnoremap <leader>xh  <plug>x2h
-nnoremap <leader>xh  <plug>x2h
+xmap <leader>xb  <plug>x2b
+nmap <leader>xb  <plug>x2b
+xmap <leader>xo  <plug>x2o
+nmap <leader>xo  <plug>x2o
+xmap <leader>xd  <plug>x2d
+nmap <leader>xd  <plug>x2d
+xmap <leader>xh  <plug>x2h
+nmap <leader>xh  <plug>x2h
