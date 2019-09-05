@@ -1,46 +1,20 @@
-download_rate = 0
-upload_rate = 100
+session.path.set = ~/.rtorrent/session
+directory.default.set = ~/.rtorrent/download
 
-encryption = allow_incoming
+throttle.global_down.max_rate.set = 1024
+throttle.global_up.max_rate.set = 100
 
-port_range = 6882-6999
+throttle.ip=NULL,192.168.0.0/24
 
-check_hash = yes
-use_udp_trackers = yes
+dht.mode.set = auto
+dht.port.set = 6881
 
-dht = auto
-dht_port = 6881
-peer_exchange = yes
+protocol.pex.set = yes
+protocol.encryption.set = allow_incoming
 
-session = ~/.rtorrent/session
-directory = ~/.rtorrent/downloads
+trackers.use_udp.set = yes
 
-schedule = low_diskspace,5,60,close_low_diskspace=10G
-schedule = watch_directory,5,5,load_start=~/.rtorrent/torrents/*.torrent
+network.port_range.set = 6882-6999
 
-throttle_ip=NULL,192.168.0.0/24
-
-#min_peers = 40
-#max_peers = 100
-
-# same as above but for seeding completed torrents (-1 = same as downloading)
-#min_peers_seed = 10
-#max_peers_seed = 50
-
-# maximum number of simultanious uploads per torrent
-#max_uploads = 15
-
-#ip = rakshasa.no
-#bind = rakshasa.no
-#port_random = no
-
-
-# allow_incoming, try_outgoing, require, require_RC4, enable_retry, prefer_plaintext
-# encryption = allow_incoming,enable_retry,prefer_plaintext
-
-
-#hash_read_ahead = 10
-
-#hash_interval = 100
-
-#hash_max_tries = 10
+schedule = low_diskspace,5,60,close_low_diskspace=16G
+schedule = watch_directory,5,5,load.start=~/.rtorrent/torrents/*.torrent
