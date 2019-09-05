@@ -1,0 +1,28 @@
+# refresh-on-startup          yes
+
+bind-key   j   next
+bind-key   k   prev
+
+bind-key    J   next-unread
+bind-key    K   prev-unread
+
+browser                     elinks -no-connect 1 %u
+
+datetime-format "%b %d %H:%M"
+
+color       background          default default
+color       listnormal          default default
+color       listnormal_unread   black   default
+color       listfocus           default default
+color       listfocus_unread    black   default
+color       info                default default
+color       article             default default
+
+highlight   feedlist  ".* N .*" black   default
+
+search-highlight-colors         black   default
+
+
+cache-file                  .feeds/newsbeuter/cache.db
+
+
