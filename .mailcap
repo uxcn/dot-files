@@ -1,5 +1,6 @@
-text/html; /usr/bin/w3m -I %{charset} -T text/html; copiousoutput; description=HTML Document
-text/calendar; /usr/bin/gcalcli import -v %s; copiousoutput; description=Calendar Invite
-application/pdf; /usr/bin/pdftotext %s -; copiousoutput; description=PDF Document; nametemplate=%s.pdf
-application/msword; /usr/bin/antiword %s; copiousoutput; description=Word Document; nametemplate=%s.doc
+text/html; w3m -I %{charset} -T text/html; copiousoutput; description=HTML Document
+text/calendar; gcalcli import -v %s; copiousoutput; description=Calendar Invite
+application/ics; gcalcli import -v %s; copiousoutput; description=Calendar Invite
+application/pdf; pdftotext %s -; copiousoutput; description=PDF Document; nametemplate=%s.pdf
+application/msword; antiword %s; copiousoutput; description=Word Document; nametemplate=%s.doc
 
