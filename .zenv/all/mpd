@@ -1,0 +1,4 @@
+# mpd
+
+export MDP_HOST=localhost
+export MDP_PORT=6600

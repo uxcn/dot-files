@@ -4,6 +4,8 @@ typeset -U path
 typeset -U fpath
 typeset -U manpath
 
+zdotdir=~
+
 host=`hostname --fqdn`
 
 path=( ~/bin $path )
@@ -20,16 +22,6 @@ fi
 
 autoload -U compinit; compinit -u
 
-# environment
-
-if test -d ~/.zenv/$host; then
-
-  for a in ~/.zenv/$host/*(@); do
-    . $a
-  done
-
-fi
-
 # aliases
 
 if test -d ~/.zaliases/$host; then
@@ -45,7 +37,7 @@ fi
 if test -d ~/.zfuns/$host; then
 
   autoload -U ~/.zfuns/$host/*(:t)
-  autoload -U ~/.zfuns/$host/*/*(:t)
+  #autoload -U ~/.zfuns/$host/*/*(:t)
 
 fi
 
@@ -55,16 +47,7 @@ bindkey  '^r'   history-incremental-search-backward
 
 # prompt
 
-prompt="%B%F{green}%n@%m%k %B%F{blue}%1~ %b%f%k"
-
-# zsh options
-
-DIRSTACKSIZE=16
-DIRSTACKFILE=~/.zdirs
-
-HISTSIZE=8192
-SAVEHIST=8192
-HISTFILE=~/.zhistory
+prompt="%B%F{gray}%n@%m%k %B%F{gray}%B%F{black}%1~ %b%f%k"
 
 setopt auto_cd
 
@@ -79,19 +62,17 @@ setopt share_history
 setopt append_history
 setopt inc_append_history
 
-# environment
+# rtorrent (FIXME)
 
-export LC_ALL="en_US.UTF-8"
+/bin/stty start undef
+/bin/stty stop undef
 
-# man pager
+# paths (named)
 
-export MANPAGER="most -c"
+hg=~/dev/hg
+cvs=~/dev/cvs
+git=~/dev/git
+svn=~/dev/svn
 
-# gnupg
+uxcn=~git/uxcn
 
-export GPG_TTY=$(/usr/bin/tty)
-
-# compiler
-
-export CC="gcc"
-export CXX="g++"

@@ -25,7 +25,7 @@ alias gcag="gca agenda"
 
 alias gcaa="gca add"
 alias gcae="gca edit"
-alias gcad="gca delte"
+alias gcad="gca delete"
 alias gcas="gca search"
 alias gcar="gca remind"
 

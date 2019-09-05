@@ -1,0 +1,44 @@
+# environment
+
+export LC_ALL="en_US.UTF-8"
+
+# zsh options
+
+DIRSTACKSIZE=16
+DIRSTACKFILE=~/.zdirs
+
+HISTSIZE=8192
+SAVEHIST=8192
+HISTFILE=~/.zhistory
+
+# general
+
+export EDITOR=nvim
+
+# man pager
+
+export MANPAGER="most -c"
+
+# gnupg
+
+export GPG_TTY=$(/usr/bin/tty)
+
+# compiler
+
+export CC=gcc
+export CXX=g++
+
+export CFLAGS="-march=native -mtune=native -O2 -flto"
+export CPPFLAGS="${CFLAGS}"
+export CXXFLAGS="${CPPFLAGS}"
+
+export LDFLAGS="-flto -Wl,--as-needed"
+
+# local (prefix)
+
+export PREFIX=~
+
+export LD_LIBRARY_PATH=~/lib
+export PKG_CONFIG_PATH=~/lib/pkgconfig
+
+export INFOCMP_DIRS=~/share/terminfo

@@ -1,0 +1,3 @@
+# oracle-jdk
+
+path=( ~/bin/oracle-jdk $path )

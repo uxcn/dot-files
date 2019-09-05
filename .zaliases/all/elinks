@@ -1,6 +1,12 @@
 # elinks aliases
 
 alias enks="elinks"
+alias enksne="elinks --config-file elinks.noecmascript.conf"
 
 alias enksd="enks https://ddg.gg"
 alias enksg="enks https://google.com"
+alias enksw="enks https://wikipedia.org"
+
+alias enksned="enksne https://ddg.gg"
+alias enksneg="enksne https://google.com"
+alias enksnew="enksne https://wikipedia.org"

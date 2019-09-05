@@ -1,0 +1,8 @@
+# ccache
+
+path=( ~/bin/ccache $path )
+
+export CCACHE_DIR=~/.ccache
+export CCACHE_SIZE=4G
+export CCACHE_CPP2=1
+#export CCACHE_COMPRESS=1

@@ -1,0 +1,5 @@
+# golang
+
+export GOPATH=~/.go
+
+path=( ~/bin/golang $path )

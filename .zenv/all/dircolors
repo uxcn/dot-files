@@ -1,0 +1,5 @@
+# dircolors
+
+eval `dircolors ~/.dir_colors`
+
+export LS_COLORS

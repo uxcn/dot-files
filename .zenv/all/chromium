@@ -1,0 +1,6 @@
+# chromium
+
+path=( ~/bin/chromium $path )
+
+export BROWSER=chromium
+

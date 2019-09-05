@@ -40,6 +40,7 @@ alias gpl="g pull"
 alias gps="g push"
 
 alias grb="g rebase"
+alias grbi="grb --interactive"
 
 alias gmv="g mv"
 alias grm="g rm"

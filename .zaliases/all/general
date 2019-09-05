@@ -16,7 +16,6 @@ alias lr="ls -R"
 
 alias less="less -R"
 alias diff="colordiff"
-alias hostname="hostname --fqdn"
 
 alias ps="ps -H -o pid,pri,nice,nlwp,user,group,maj_flt,min_flt,rss,vsz,%cpu,%mem,time,state,cmd"
 alias psc="ps -C"

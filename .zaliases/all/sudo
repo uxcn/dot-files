@@ -5,6 +5,6 @@ alias so="sudo"
 alias soi="so --login"
 alias soe="so --edit"
 alias sop="so --preserve-env"
-alias sos="so --shell --preserve-env"
+alias sos="so --shell --preserve-env=PATH"
 
 alias sov="so visudo"

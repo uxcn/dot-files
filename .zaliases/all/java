@@ -1,0 +1,3 @@
+# java
+
+alias java-repl="java -jar ~/.java/bin/javarepl-428.jar"
