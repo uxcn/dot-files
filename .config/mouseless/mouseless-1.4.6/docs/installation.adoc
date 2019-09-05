@@ -1,0 +1,23 @@
+:uri-asciidoctor: http://asciidoctor.org
+:icons: font
+:source-highlighter: pygments
+:nofooter:
+link:index.html[Home]
+
+
+== How to install
+
+
+
+== ZIP version
+
+. Download latest from https://github.com/hbt/mouseless/releases
+. turn on flag `chrome://flags/#extensions-on-chrome-urls`
+. restart browser
+. load unpacked extension 
+. should work on every tab except `view-source`
+
+NOTE: You can disable the yellow bar warning when starting chrome using `--disable-infobars`
+
+NOTE: On Vivaldi, a different flag is used. Check https://github.com/hbt/mouseless/issues/73
+
