@@ -1,6 +1,7 @@
+color normal     default default
 
-source ~/.mutt/mutt-colors-contrast-256.muttrc
-source ~/.mutt/gpg.muttrc
+#source ~/.config/neomutt/colors-contrast-256.muttrc
+source ~/.config//neomutt/gpg.muttrc
 
 set realname="Jason Schulz"
 
@@ -15,7 +16,7 @@ set edit_headers
 set send_charset="utf-8"
 set assumed_charset="iso-8859-1"
 
-set editor="nvim -c 'set syntax=mail filetype=mail spell spelllang=en nonumber textwidth=0'"
+set editor="nvim -c 'set textwidth=0 syntax=mail filetype=mail spell spelllang=en_us nonumber'"
 
 set timeout=300
 set mail_check=300
@@ -76,6 +77,9 @@ bind index,pager    <right>   sidebar-open
 
 set hostname=gmail.com
 
+bind  index,pager   g         noop
+bind index,pager    G         imap-fetch-mail
+
 macro index,pager   y         "<enter-command>unset trash<enter><delete-message>"                                         "gmail archive message"
 macro index,pager   d         "<enter-command>set trash=\"=[Gmail]/Trash\"<enter><delete-message>"                        "gmail delete message"
 macro index,pager   gi        "<change-folder>=INBOX<enter>"                                                          "go to inbox"
@@ -83,8 +87,6 @@ macro index,pager   ga        "<change-folder>=[Gmail]/All Mail<enter>"         
 macro index,pager   gs        "<change-folder>=[Gmail]/Starred<enter>"                                                "go to starred messages"
 macro index,pager   gd        "<change-folder>=[Gmail]/Drafts<enter>"                                                 "go to drafts"
 macro index,pager   S         "<save-message>=[Gmail]/Spam<enter>"                                                    "mark as spam"
-
-bind index,pager    G         imap-fetch-mail
 
 # google contacts
 
@@ -121,11 +123,11 @@ mailboxes =INBOX \
           =[Gmail]/Sent\ Mail \
           =[Gmail]/Spam \
           =[Gmail]/Trash \
-          =personal \
           =family \
+          =personal \
+          =github \
           =acm \
           =bugs \
           =vim \
           =neovim \
-          =github \
 
