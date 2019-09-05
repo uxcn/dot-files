@@ -41,6 +41,8 @@ set number
 set relativenumber
 syntax on
 
+let mapleader = ","
+
 " ultisnips
 let g:UltiSnipsExpandTrigger="<c-y>"
 let g:UltiSnipsJumpForwardTrigger="<c-i>"
