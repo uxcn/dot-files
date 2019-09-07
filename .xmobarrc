@@ -1,0 +1,24 @@
+Config { font = "xft:Droid Sans Mono Slashed:style=Regular:size=8:anitalias=true:autohint=true"
+       , bgColor = "#262626"
+       , fgColor = "#686868"
+       , overrideRedirect = False
+       , position = TopW L 100
+       , lowerOnStart = True
+       , commands = [ Run Weather "KSEA" ["-t","<tempC>","-L","17","-H","25","--low","#686868","--normal","#afafaf","--high","#f9f9f9"] 36000
+                    , Run MultiCpu ["-t","<total0>% <total1>% <total2>% <total3>%","-L","50","-H","90","--low","#686868","--normal","#afafaf","--high","#f9f9f9"] 10
+                    , Run Memory ["-t","<used>M","-L","4096","-H","8192","--low","#686868","--normal","#afafaf","--high","#f9f9f9" ] 10
+                    , Run Swap ["-t", "<used>M","-L","1024","-H","2048","--low","#686868","--normal","#afafaf","--high","#f9f9f9" ] 10
+                    , Run DiskU [("/", "<used>") ] ["-L","64","-H","128","--low","#686868","--normal","#afafaf","--high","#f9f9f9" ] 10
+                    , Run DynNetwork ["-t", "<dev> <rx>kb <tx>kb"] 10
+                    , Run Wireless "wls8" ["-t", "<essid>"] 10
+                    , Run BatteryP ["BAT0", "BAT1"] ["-t", "<timeleft>"] 10
+                    , Run CpuFreq ["-t","<cpu0> <cpu1>","-L","0","-H","2","--low","#686868","--normal","#afafaf","--high","#f9f9f9"] 50
+                    , Run CoreTemp ["-t","<core0> <core1>","-L","60","-H","80","--low","#686868","--normal","#afafaf","--high","#f9f9f9"] 50
+                    , Run Date "<fc=#686868>%Y/%m/%d</fc> <fc=#686868>%H:%M</fc>" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %multicpu% : %coretemp% : %memory% : %swap% : %disku% : %wls8wi% : %dynnetwork% : %battery%             %date%"
+       }
+       

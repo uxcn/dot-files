@@ -1,41 +1,34 @@
-#!/bin/zsh -li
+#!/bin/zsh -l
 
-if test -e /dev/dri/card0 &&
-   test -e /dev/dri/card1 &&
-   test -e /dev/dri/card2; then
+if test -e ~/.Xmodmap; then
 
-    /usr/bin/xrandr --setprovideroutputsource 1 0
-    /usr/bin/xrandr --output DVI-1-0 --auto --output DP2 --auto --left-of DVI-1-0 --output LVDS1 --auto --left-of DP2
-
-else
-
-    /usr/bin/xrandr --output LVDS1 --auto
+    xmodmap ~/.Xmodmap
 
 fi
 
 
 # background
-hsetroot -solid \#373737
+hsetroot -solid \#262626
 
 # compositor
 compton -b
 
 # start xscreensaver
-xscreensaver -no-splash &
-
-# start urxvtd
-urxvtd -q -f -o
+xscreensaver &
 
 # start synergy server
-synergys
+# synergys
 
 # start pulseaudio
-start-pulseaudio-x11 --start --log-target=syslog
+start-pulseaudio-x11
+
+pactl load-module module-dbus-protocol &>/dev/null # FIXME
+pactl load-module module-equalizer-sink &>/dev/null # FIXME
 
 xmonad
 
 # stop synergy server
-pkill synergys
+# pkill synergys
 
 # stop mpd
 mpd --kill

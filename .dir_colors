@@ -54,6 +54,7 @@ TERM screen-w
 TERM screen.linux
 TERM screen.xterm-new
 TERM st
+TERM st-24bit
 TERM st-meta
 TERM st-256color
 TERM st-meta-256color

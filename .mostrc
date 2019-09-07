@@ -2,7 +2,7 @@
 
 color normal default default
 color status white default
-color underline yellow default bold
+color underline blue default
 color overstrike white default
 
 % keybinds
@@ -25,11 +25,12 @@ setkey eob			"B"
 setkey page_down		"D"
 setkey edit			"E"
 setkey search_forward		"F"
-setkey goto_line		"G"
-setkey help			"H"
+% setkey goto_line		"G"
+% setkey help			"H"
+setkey help			"h"
 setkey goto_line		"J"
 setkey toggle_lock		"L"
-setkey set_mark			"M"
+% setkey set_mark			"M"
 setkey find_next		"N"
 setkey other_window		"O"
 setkey exit			"Q"
@@ -127,3 +128,11 @@ setkey bob			"t"
 setkey down			"v"
 setkey toggle_width		"w"
 setkey exit			"x"
+
+% navigation
+
+setkey bob            "^[[1~"
+setkey eob            "^[[4~"
+
+setkey eob            "G"
+

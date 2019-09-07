@@ -1,15 +1,15 @@
 [core]
- editor = nvim
+	editor = nvim
 [transfer]
- fsckobjects = true
+	fsckobjects = true
 [fetch]
- fsckobjects = true
+	fsckobjects = true
 [receive]
-  fsckobjects = true 
+	fsckobjects = true
 [push]
 	default = simple
 [mergetool "fugitive"]
-  cmd = nvim -f -c Gdiff \"$MERGED\"
+	cmd = nvim -f -c Gdiff \"$MERGED\"
 [merge]
 	tool = fugitive
 [user]
@@ -18,14 +18,19 @@
 [color]
 	ui = true
 [web]
-	browser = /usr/bin/w3m
+	browser = elinks
+[color "branch"]
+	current = 255
+	local = 233
+	remote = 234
 [color "diff"]
-	new = white
-	old = bold cyan
-	frag = white
-  meta = white
+	new = 255
+	old = 248
+	frag = 33
+	meta = 241
 [color "status"]
-	added = white
-	updated = white
-	changed = bold cyan
-	untracked = bold cyan
+	added = 255
+	commit = 255
+	updated = 255
+	changed = 255
+	untracked = 241
